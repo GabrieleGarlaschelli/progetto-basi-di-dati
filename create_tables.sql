@@ -83,10 +83,10 @@ CREATE TABLE Corriere(
 );
 
 CREATE TABLE Spedizione(
-CodiceSpedizione INTEGER not null PRIMARY KEY,
-Targa VARCHAR(7) not null references Corriere(Targa),
-Data date not null references Corriere(Data),
-CodiceSpedizioneRiprovata date not null references Spedizione
+	CodiceSpedizione INTEGER not null PRIMARY KEY,
+	Targa VARCHAR(7) not null references Corriere(Targa),
+	Data date not null references Corriere(Data),
+	CodiceSpedizioneRiprovata date not null references Spedizione
 );
 
 CREATE TABLE Acquisto(
