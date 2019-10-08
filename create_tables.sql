@@ -23,9 +23,9 @@ CREATE TABLE Scaffale (
 	CodiceReparto INTEGER REFERENCES Reparto(CodiceReparto)
 );
 
-CREATE TABLE Cateogria ( 
+CREATE TABLE Categoria( 
 	CodiceCategoria INTEGER primary key,
-	NomeCategoria VARCHAR(255) not null,
+	NomeCategoria VARCHAR(255) not null
 );
 
 CREATE TABLE Prodotto ( 
@@ -33,17 +33,15 @@ CREATE TABLE Prodotto (
  	NomeProdotto VARCHAR(30) not null, 
  	Marca VARCHAR(30) not null, 
  	Prezzo NUMERIC(10,2) not null, 
- 	CodiceScaffale INTEGER not null, 
+ 	CodiceScaffale INTEGER references Scaffale (CodiceScaffale),
  	QuantitàRimanente INTEGER not null, 
- 	NomeCategoria VARCHAR(30) not null, 
+ 	CodiceCategoria INTEGER references Categoria (CodiceCategoria),
 	Fornitore VARCHAR(30) not null, 
-	Foreign key CodiceScaffale references(Scaffale),  
-	Foreign key CodiceCategoria references(Categoria), 
 	CHECK (QuantitàRimanente>= 0),  
 	CHECK (Prezzo > 0)
 ); 
 
 CREATE TABLE CodiceCarrello ( 
 	CodiceCategoria INTEGER primary key,
-	NomeCategoria VARCHAR(255) not null,
+	NomeCategoria VARCHAR(255) not null
 );
