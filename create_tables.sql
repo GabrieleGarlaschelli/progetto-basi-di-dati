@@ -10,7 +10,7 @@ CREATE TABLE Utente (
 
 CREATE TABLE Magazzino ( 
 	CodiceMagazzino INTEGER primary key,
-	Indirizzo VARCHAR(255),
+	Indirizzo VARCHAR(255)
 );
 
 CREATE TABLE Reparto ( 
