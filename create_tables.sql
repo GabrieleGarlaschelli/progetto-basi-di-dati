@@ -15,14 +15,12 @@ CREATE TABLE Magazzino (
 
 CREATE TABLE Reparto ( 
 	CodiceReparto INTEGER primary key,
-	CodiceMagazzino INTEGER not null,
-	Foreign key CodiceMagazzino references(Magazzino),  
+	CodiceMagazzino INTEGER REFERENCES Magazzino(CodiceMagazzino)
 );
 
 CREATE TABLE Scaffale ( 
 	CodiceScaffale INTEGER primary key,
-	CodiceReparto INTEGER not null,
-	Foreign key CodiceReparto references(Reparto),  
+	CodiceReparto INTEGER REFERENCES Reparto(CodiceReparto)
 );
 
 CREATE TABLE Cateogria ( 
