@@ -4,3 +4,17 @@ drop table Reparto CASCADE;
 drop table Scaffale CASCADE;
 drop table Categoria CASCADE;
 drop table Prodotto CASCADE;
+drop table Carta CASCADE;
+drop table Carrello CASCADE;
+drop table ProdottoCarrello CASCADE;
+drop table MetodoDiPagamento CASCADE;
+drop table Furgone CASCADE;
+drop table Corriere CASCADE;
+drop table Spedizione CASCADE;
+drop table Acquisto CASCADE;
+drop table AcquistoProdotto CASCADE;
+drop table Tecnico CASCADE;
+drop table Magazziniere CASCADE;
+drop table Autista CASCADE;
+drop table Turno CASCADE;
+

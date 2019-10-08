@@ -41,18 +41,13 @@ CREATE TABLE Prodotto (
 	CHECK (Prezzo > 0)
 ); 
 
-CREATE TABLE Categoria ( 
-	CodiceCategoria INTEGER primary key,
-	NomeCategoria VARCHAR(255) not null
-);
-
 CREATE TABLE Carta(
 	NumeroCarta INTEGER primary key,
 	Scadenza date not null,
 	CodiceNumericoDiSicurezza INTEGER not null
 );
 
-CREATE TABLE Carello(
+CREATE TABLE Carrello(
 	CodiceCarrello INTEGER not null,
 	PrezzoTotale DECIMAL not null
 );
@@ -86,7 +81,7 @@ CREATE TABLE Spedizione(
 	CodiceSpedizione INTEGER not null PRIMARY KEY,
 	Targa VARCHAR(7) not null references Corriere(Targa),
 	Data date not null references Corriere(Data),
-	CodiceSpedizioneRiprovata date not null references Spedizione
+	CodiceSpedizioneRiprovata INTEGER not null references Spedizione
 );
 
 CREATE TABLE Acquisto(
@@ -95,5 +90,63 @@ CREATE TABLE Acquisto(
 	NumeroCarta INTEGER not null references MetodoDiPagamento(NumeroCarta),
 	CodiceSpedizione INTEGER not null references Spedizione(CodiceSpedizione)
 );
+
+CREATE TABLE AcquistoProdotto(
+CodiceProdotto INTEGER not null PRIMARY KEY references Prodotto (CodiceProdotto),
+CodiceAcquisto INTEGER not null references Acquisto(CodiceAcquisto),
+Quantità INTEGER not null
+);
+
+CREATE TABLE Tecnico(
+CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
+Nome VARCHAR(25) not null,
+Cognome VARCHAR(25) not null,
+NumeroTelefono INTEGER,
+Specializzazione VARCHAR(25) not null
+);
+
+CREATE TABLE Magazziniere(
+CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
+MatricolaMagazziniere INTEGER not null unique,
+Nome VARCHAR(25) not null,
+Cognome VARCHAR(25) not null,
+NumeroTelefono INTEGER
+);
+
+CREATE TABLE Autista(
+CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
+NumeroPatente INTEGER not null unique,
+Nome VARCHAR(25) not null,
+Cognome VARCHAR(25) not null,
+NumeroTelefono INTEGER
+);
+
+CREATE TABLE Turno(
+CodiceFiscale VARCHAR(16) not null unique references Magazziniere(CodiceFiscale),
+Giorno date not null unique, 
+PRIMARY KEY(CodiceFiscale,Giorno)
+);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
