@@ -48,14 +48,15 @@ CREATE TABLE Carta(
 );
 
 CREATE TABLE Carrello(
-	CodiceCarrello INTEGER not null,
+	CodiceCarrello INTEGER not null PRIMARY KEY,
 	PrezzoTotale DECIMAL not null
 );
 
 CREATE TABLE ProdottoCarrello(
-	CodiceCarrello INTEGER primary key not null, 
-	CodiceProdotto INTEGER not null references Prodotto (CodiceProdotto), 
-	quantità INTEGER not null
+	CodiceCarrello INTEGER not null unique references Carrello(CodiceCarrello),
+	CodiceProdotto INTEGER not null unique references Prodotto (CodiceProdotto), 
+	quantità INTEGER not null, 
+	PRIMARY KEY(CodiceCarrello,CodiceProdotto)
 );
 
 CREATE TABLE MetodoDiPagamento(
@@ -126,27 +127,3 @@ CodiceFiscale VARCHAR(16) not null unique references Magazziniere(CodiceFiscale)
 Giorno date not null unique, 
 PRIMARY KEY(CodiceFiscale,Giorno)
 );
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
