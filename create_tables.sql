@@ -71,6 +71,14 @@ CREATE TABLE Furgone(
 	ScadenzaAssicurazione date not null
 );
 
+CREATE TABLE Autista(
+CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
+NumeroPatente INTEGER not null unique,
+Nome VARCHAR(25) not null,
+Cognome VARCHAR(25) not null,
+NumeroTelefono INTEGER
+);
+
 CREATE TABLE Corriere(
 	Targa VARCHAR(7) not null unique references Furgone(Targa),
 	Data date not null unique,
@@ -114,13 +122,6 @@ Cognome VARCHAR(25) not null,
 NumeroTelefono INTEGER
 );
 
-CREATE TABLE Autista(
-CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
-NumeroPatente INTEGER not null unique,
-Nome VARCHAR(25) not null,
-Cognome VARCHAR(25) not null,
-NumeroTelefono INTEGER
-);
 
 CREATE TABLE Turno(
 CodiceFiscale VARCHAR(16) not null unique references Magazziniere(CodiceFiscale),
