@@ -53,8 +53,8 @@ CREATE TABLE Carrello(
 );
 
 CREATE TABLE ProdottoCarrello(
-	CodiceCarrello INTEGER not null unique references Carrello(CodiceCarrello),
-	CodiceProdotto INTEGER not null unique references Prodotto (CodiceProdotto), 
+	CodiceCarrello INTEGER not null references Carrello(CodiceCarrello),
+	CodiceProdotto INTEGER not null references Prodotto (CodiceProdotto), 
 	quantità INTEGER not null, 
 	PRIMARY KEY(CodiceCarrello,CodiceProdotto)
 );

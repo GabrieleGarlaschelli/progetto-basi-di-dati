@@ -155,6 +155,10 @@ INSERT INTO public.carrello(
 INSERT INTO public.prodottocarrello(
 	codicecarrello, codiceprodotto, "quantità")
 	VALUES (1, 12392, 1);
+
+INSERT INTO public.prodottocarrello(
+	codicecarrello, codiceprodotto, "quantità")
+	VALUES (1,12384, 1);
 	
 	
 	
