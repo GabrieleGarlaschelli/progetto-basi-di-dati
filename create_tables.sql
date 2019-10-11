@@ -61,7 +61,7 @@ CREATE TABLE ProdottoCarrello(
 
 CREATE TABLE MetodoDiPagamento(
 	CF VARCHAR(16) not null unique,
-	NumeroCarta INTEGER not null unique,
+	NumeroCarta INTEGER not null unique references Carta(NumeroCarta),
 	PRIMARY KEY(CF,NumeroCarta)
 );
 
@@ -74,7 +74,7 @@ CREATE TABLE Furgone(
 CREATE TABLE Corriere(
 	Targa VARCHAR(7) not null unique references Furgone(Targa),
 	Data date not null unique,
-	CodiceFiscale VARCHAR(16) not null, 
+	CodiceFiscale VARCHAR(16) not null references Autista(CodiceFiscale),
 	PRIMARY KEY(Targa,Data)
 );
 
