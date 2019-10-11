@@ -89,7 +89,7 @@ CREATE TABLE Acquisto(
 	CodiceAcquisto INTEGER not null PRIMARY KEY,
 	CF VARCHAR(16) not null references MetodoDiPagamento(CF),
 	NumeroCarta INTEGER not null references MetodoDiPagamento(NumeroCarta),
-	CodiceSpedizione INTEGER not null references Spedizione(CodiceSpedizione)
+	CodiceSpedizione INTEGER references Spedizione(CodiceSpedizione)
 );
 
 CREATE TABLE AcquistoProdotto(
