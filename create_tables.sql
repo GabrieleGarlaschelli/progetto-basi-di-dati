@@ -76,7 +76,7 @@ CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
 NumeroPatente INTEGER not null unique,
 Nome VARCHAR(25) not null,
 Cognome VARCHAR(25) not null,
-NumeroTelefono INTEGER
+NumeroTelefono VARCHAR(10)
 );
 
 CREATE TABLE Corriere(
@@ -110,7 +110,7 @@ CREATE TABLE Tecnico(
 CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
 Nome VARCHAR(25) not null,
 Cognome VARCHAR(25) not null,
-NumeroTelefono INTEGER,
+NumeroTelefono VARCHAR(10),
 Specializzazione VARCHAR(25) not null
 );
 
@@ -119,7 +119,7 @@ CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
 MatricolaMagazziniere INTEGER not null unique,
 Nome VARCHAR(25) not null,
 Cognome VARCHAR(25) not null,
-NumeroTelefono INTEGER
+NumeroTelefono VARCHAR(10)
 );
 
 
