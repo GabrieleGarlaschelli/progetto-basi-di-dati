@@ -182,6 +182,12 @@ INSERT INTO public.furgone(
 	
 	
 	
+INSERT INTO public.autista(
+	codicefiscale, numeropatente, nome, cognome, numerotelefono)
+	VALUES ('mdslln88s78c789r', 10, 'Giacomo', 'Tadini', 3332545845);
+	
+	
+	
 INSERT INTO public.corriere(
 	targa, data, codicefiscale)
 	VALUES ('ro130mi', '2020-03-03', 'weruln98t78c679r');
