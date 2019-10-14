@@ -182,34 +182,89 @@ INSERT INTO public.furgone(
 	
 	
 	
+	
 INSERT INTO public.autista(
 	codicefiscale, numeropatente, nome, cognome, numerotelefono)
 	VALUES ('mdslln88s78c789r', 10, 'Giacomo', 'Tadini', 3332545845);
+
+INSERT INTO public.autista(
+	codicefiscale, numeropatente, nome, cognome, numerotelefono)
+	VALUES ('mvsssn88s78g789r', 11, 'Luca', 'Geliti', 3342533845);
+	
 	
 	
 	
 INSERT INTO public.corriere(
 	targa, data, codicefiscale)
-	VALUES ('ro130mi', '2020-03-03', 'weruln98t78c679r');
+	VALUES ('ro130mi', '2020-03-03', 'mdslln88s78c789r');
 
 INSERT INTO public.corriere(
 	targa, data, codicefiscale)
-	VALUES ('to150re', '2020-07-08', 'wgrudn98t78v679r');
+	VALUES ('to150re', '2020-07-08', 'mvsssn88s78g789r');
+	
+	
+
+
+INSERT INTO public.spedizione(
+	codicespedizione, targa, data, codicespedizioneriprovata)
+	VALUES (66, 'ro130mi', '2020-03-03', null);
+	
+INSERT INTO public.spedizione(
+	codicespedizione, targa, data, codicespedizioneriprovata)
+	VALUES (67, 'to150re', '2020-07-08', null);
+	
+
+
+
+INSERT INTO public.acquisto(
+	codiceacquisto, cf, numerocarta, codicespedizione)
+	VALUES (88, 'moimln98s78c789r', 1234567891, 66);
+	
+INSERT INTO public.acquisto(
+	codiceacquisto, cf, numerocarta, codicespedizione)
+	VALUES (89, 'mdluln98s78c789r', 1346798526, 67);
+
+	
+	
+
+INSERT INTO public.acquistoprodotto(
+	codiceprodotto, codiceacquisto, "quantità")
+	VALUES (12375, 88, 1);
+	
+INSERT INTO public.acquistoprodotto(
+	codiceprodotto, codiceacquisto, "quantità")
+	VALUES (12376, 89, 1);
 	
 	
 	
 	
+INSERT INTO public.tecnico(
+	codicefiscale, nome, cognome, numerotelefono, specializzazione)
+	VALUES ('qifjcu98s78c852r', 'Marco', 'Gerra', '3425698458', 'informatico');
+	
+INSERT INTO public.tecnico(
+	codicefiscale, nome, cognome, numerotelefono, specializzazione)
+	VALUES ('spleuf98s78c452r', 'Luca', 'Artorias', '3215878956', 'mobilio');	
 	
 	
 	
 	
+INSERT INTO public.magazziniere(
+	codicefiscale, matricolamagazziniere, nome, cognome, numerotelefono)
+	VALUES ('qrfjdu92s72c852e', 74, 'Stefano', 'Rivoli', '3894562812');
+	
+INSERT INTO public.magazziniere(
+	codicefiscale, matricolamagazziniere, nome, cognome, numerotelefono)
+	VALUES ('eighti93t34c872r', 75, 'Pietro', 'Perelli', '3665873254');	
 	
 	
 	
 	
-	
-	
-	
-	
-	
+INSERT INTO public.turno(
+	codicefiscale, giorno)
+	VALUES ('qrfjdu92s72c852e', '2019-06-06');
+
+INSERT INTO public.turno(
+	codicefiscale, giorno)
+	VALUES ('eighti93t34c872r', '2019-06-07');
 	
