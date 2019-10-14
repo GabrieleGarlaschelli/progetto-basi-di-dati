@@ -76,7 +76,7 @@ CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
 NumeroPatente INTEGER not null unique,
 Nome VARCHAR(25) not null,
 Cognome VARCHAR(25) not null,
-NumeroTelefono VARCHAR(10),
+NumeroTelefono VARCHAR(10)
 );
 
 CREATE TABLE Corriere(
@@ -119,7 +119,7 @@ CodiceFiscale VARCHAR(16) not null PRIMARY KEY,
 MatricolaMagazziniere INTEGER not null unique,
 Nome VARCHAR(25) not null,
 Cognome VARCHAR(25) not null,
-NumeroTelefono VARCHAR(10),
+NumeroTelefono VARCHAR(10)
 );
 
 
