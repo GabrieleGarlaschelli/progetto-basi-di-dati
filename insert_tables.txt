@@ -159,7 +159,47 @@ INSERT INTO public.prodottocarrello(
 INSERT INTO public.prodottocarrello(
 	codicecarrello, codiceprodotto, "quantità")
 	VALUES (1,12384, 1);
+	
+	
 
+INSERT INTO public.metododipagamento(
+	cf, numerocarta)
+	VALUES ('moimln98s78c789r', 1234567891);
+	
+INSERT INTO public.metododipagamento(
+	cf, numerocarta)
+	VALUES ('mdluln98s78c789r', 1346798526);
+	
+	
+	
+INSERT INTO public.furgone(
+	targa, metododicarburazione, scadenzaassicurazione)
+	VALUES ('to150re', 'benzina', '2023-03-03');
+
+INSERT INTO public.furgone(
+	targa, metododicarburazione, scadenzaassicurazione)
+	VALUES ('ro130mi', 'diesel', '2021-04-04');
+	
+	
+	
+INSERT INTO public.autista(
+	codicefiscale, numeropatente, nome, cognome, numerotelefono)
+	VALUES ('mdslln88s78c789r', 10, 'Giacomo', 'Tadini', 3332545845);
+	
+	
+	
+INSERT INTO public.corriere(
+	targa, data, codicefiscale)
+	VALUES ('ro130mi', '2020-03-03', 'weruln98t78c679r');
+
+INSERT INTO public.corriere(
+	targa, data, codicefiscale)
+	VALUES ('to150re', '2020-07-08', 'wgrudn98t78v679r');
+	
+	
+	
+	
+	
 	
 	
 	
