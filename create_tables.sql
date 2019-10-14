@@ -90,7 +90,7 @@ CREATE TABLE Spedizione(
 	CodiceSpedizione INTEGER not null PRIMARY KEY,
 	Targa VARCHAR(7) not null references Corriere(Targa),
 	Data date not null references Corriere(Data),
-	CodiceSpedizioneRiprovata INTEGER not null references Spedizione
+	CodiceSpedizioneRiprovata INTEGER references Spedizione
 );
 
 CREATE TABLE Acquisto(
