@@ -152,6 +152,7 @@ INSERT INTO public.carrello(
 	codicecarrello, prezzototale)
 	VALUES (2, 80);
 	
+	
 INSERT INTO public.prodottocarrello(
 	codicecarrello, codiceprodotto, "quantità")
 	VALUES (1, 12392, 1);
@@ -159,6 +160,14 @@ INSERT INTO public.prodottocarrello(
 INSERT INTO public.prodottocarrello(
 	codicecarrello, codiceprodotto, "quantità")
 	VALUES (1,12384, 1);
+
+INSERT INTO public.prodottocarrello(
+	codicecarrello, codiceprodotto, "quantità")
+	VALUES (2,12376, 1);
+	
+INSERT INTO public.prodottocarrello(
+	codicecarrello, codiceprodotto, "quantità")
+	VALUES (2,45126, 1);
 	
 	
 
