@@ -20,7 +20,8 @@ CREATE TABLE Reparto (
 
 CREATE TABLE Scaffale ( 
 	CodiceScaffale INTEGER primary key,
-	CodiceReparto INTEGER REFERENCES Reparto(CodiceReparto)
+	CodiceReparto INTEGER REFERENCES Reparto(CodiceReparto),
+	capienza INTEGER not null
 );
 
 CREATE TABLE Categoria( 

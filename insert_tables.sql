@@ -41,36 +41,36 @@ INSERT INTO public.reparto(
 	
 	
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (11, 243);
+	codicescaffale, codicereparto, capienza)
+	VALUES (11, 243, 150);
 
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (15, 243);
+	codicescaffale, codicereparto, capienza)
+	VALUES (15, 243, 150);
 	
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (12, 255);
+	codicescaffale, codicereparto, capienza)
+	VALUES (12, 255, 150);
 	
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (16, 255);
+	codicescaffale, codicereparto, capienza)
+	VALUES (16, 255, 150);
 
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (8, 284);
+	codicescaffale, codicereparto, capienza)
+	VALUES (8, 284, 150);
 	
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (9, 284);
+	codicescaffale, codicereparto, capienza)
+	VALUES (9, 284, 150);
 
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (20, 217);
+	codicescaffale, codicereparto, capienza)
+	VALUES (20, 217, 150);
 
 INSERT INTO public.scaffale(
-	codicescaffale, codicereparto)
-	VALUES (21, 217);
+	codicescaffale, codicereparto, capienza)
+	VALUES (21, 217, 150);
 	
 	
 	
