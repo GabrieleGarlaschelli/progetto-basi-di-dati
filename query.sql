@@ -1,16 +1,16 @@
-#Dato un prodotto la cui QuantitàRimanente è minore di 10, restituire scaffale e reparto. 
+/*Dato un prodotto la cui QuantitàRimanente è minore di 10, restituire scaffale e reparto. */
 
 SELECT CodiceScaffale, CodiceReparto  
 
 FROM Scaffale as S 
 
-WHERE S.CodiceScaffale=Prodotto.CodiceScaffale  
+INNER JOIN Prodotto ON S.CodiceScaffale=Prodotto.CodiceScaffale  
 
 AND QuantitàRimanente<10  
 
  
 
-#Quali prodotti nella categoria 'elettrodomestici' sono stati acquistati dall'utente Rossi Luigi. 
+/*Quali prodotti nella categoria 'elettrodomestici' sono stati acquistati dall'utente Rossi Luigi. */
 
   
 
@@ -28,7 +28,7 @@ WHERE categoria.nomecategoria = 'elettrodomestici' AND utente.nome = 'Rossi Luig
 
  
 
-#Quali utenti hanno acquistato tutti i prodotti nella categoria 'elettrodomestici' 
+/*Quali utenti hanno acquistato tutti i prodotti nella categoria 'elettrodomestici' */
 
   
 
